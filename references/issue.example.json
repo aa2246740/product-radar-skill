@@ -1,0 +1,336 @@
+{
+  "kind": "digest",
+  "date": "2026-10-10",
+  "slot": "morning",
+  "headline": "Deno 团队加入 Cloudflare",
+  "deck": "Deno 运行时再发一年修复版后停止开发，Deno Deploy 6 个月后关停",
+  "intro": [
+    "Oxide 做整机柜私有云，完成 4.45 亿美元 D 轮，Eclipse 领投，Axios 报估值 60 亿美元。TypeSafe AI 融资 8.7 亿美元，估值 75 亿美元，a16z 领投。"
+  ],
+  "window": "上海周五 19:00 到周六 09:00。以 HN、X、YouTube 为主；PH 周六日榜尚未开始，PH 条目取自周五日榜",
+  "groups": [
+    {
+      "key": "new",
+      "label": "新品"
+    },
+    {
+      "key": "interview",
+      "label": "访谈"
+    }
+  ],
+  "items": [
+    {
+      "group": "new",
+      "title": "Deno 团队加入 Cloudflare",
+      "deck": "Deploy 付费用户可获迁移到 Workers 的支持；Cloudflare 会把 celld 和 workerd 合并",
+      "badges": [
+        "HN"
+      ],
+      "body": [
+        "Deno 创始人 Ryan Dahl 10 月 9 日在官方博客宣布，整个 Deno 团队加入 Cloudflare，博客没有写交易金额。安排很具体：Deno 运行时再发一年月度版本，只含 bug 修复和安全更新，之后停止开发，代码保持开源，欢迎别人接手；Deno Deploy 再运行 6 个月后关停，付费用户可以得到迁到 Cloudflare Workers 的支持；JSR 继续运营，基础设施搬到 Cloudflare；rusty_v8 继续维护，并争取并入 workerd。动机在 celld：Deno 8 月发布的 Rust 单二进制，能在自己的机器上跑 Workers 和 Durable Objects，状态存在你自己的对象存储桶里。Cloudflare 的 Kenton Varda 同日发了联署文，说会把 celld 和开源的 workerd 合并，让 Workers 编程模型可以自托管。Dahl 另外提到，Durable Objects 的廉价无服务器执行、持久状态和 WebSocket 适合做 agent harness，并邀请在自家基础设施上大规模跑 agent 的人联系他。HN 约 1080 分、560 多条评论。"
+      ],
+      "judge": "用 Deno Deploy 的项目要在 6 个月内迁走，二选一：走官方支持迁到 Workers，或用 celld 自托管。",
+      "links": [
+        {
+          "label": "HN",
+          "url": "https://news.ycombinator.com/item?id=50019911"
+        },
+        {
+          "label": "产品",
+          "url": "https://deno.com/blog/cloudflare"
+        },
+        {
+          "label": "Cloudflare 博客",
+          "url": "https://blog.cloudflare.com/deno-joins-cloudflare/"
+        }
+      ]
+    },
+    {
+      "group": "new",
+      "title": "Oxide 完成 4.45 亿美元 D 轮",
+      "deck": "AMD 作为战略投资人入局，Jane Street 等老股东跟投；今年春天首次交所得税",
+      "badges": [
+        "HN"
+      ],
+      "body": [
+        "Oxide 做整机柜私有云：自研服务器、交换机和软件一体卖给想自己拥有算力的企业。10 月 9 日官宣 4.45 亿美元 D 轮，Eclipse 领投，老股东 USIT、Riot Ventures、Jane Street 继续投，新进 Atreides Management，AMD 作为战略投资人入局（新闻稿写 AMD Ventures）。估值公司没公布，Axios 报 60 亿美元，累计融资约 8.35 亿美元（Axios 口径）。博客称今年春天公司第一次交了所得税，靠正常卖机器就有应税利润，同时订单积压很大，供不应求；这笔钱用来买元器件、扩产能、接新订单。创始团队是 Steve Tuck 和 Bryan Cantrill（联合创始人兼 CTO），Eclipse 2019 年种子轮起就投。HN 约 600 分、270 条评论，评论里有人提醒，净利润为正时现金流仍可能为负，硬件公司要先垫钱备货。"
+      ],
+      "links": [
+        {
+          "label": "HN",
+          "url": "https://news.ycombinator.com/item?id=50020014"
+        },
+        {
+          "label": "产品",
+          "url": "https://oxide.computer/blog/our-445m-series-d"
+        },
+        {
+          "label": "新闻稿",
+          "url": "https://www.prnewswire.com/news-releases/oxide-raises-445m-series-d-as-the-company-proves-vision-of-full-stack-cloud-infrastructure-enterprises-can-own-302903159.html"
+        },
+        {
+          "label": "Axios",
+          "url": "https://www.axios.com/pro/enterprise-software-deals/2026/10/09/compute-cloud-ai-oxide"
+        }
+      ]
+    },
+    {
+      "group": "new",
+      "title": "TypeSafe AI 融资 8.7 亿美元",
+      "deck": "产品 Jev 不生成文字，只输出带置信度的结构化决策；公司称响应 70 到 500 毫秒",
+      "badges": [
+        "HN"
+      ],
+      "body": [
+        "TypeSafe AI 10 月 9 日官宣融资 8.7 亿美元，估值 75 亿美元，a16z 领投（Martin Casado 进董事会），Sequoia 和老股东 DCVC 跟投；博客标题写 Series AI，脚注称是 series A，口径没展开。",
+        "产品是 Jev，公司称为 System One 模型：不生成文字，只输出事先定义好类型的决策，每个结果带校准过的置信度，一次查询并行给出全部答案，用来做分类、路由、打分这类「聪明的 if 语句」。官方称 Jev 响应 70 到 500 毫秒（前沿 LLM 为 3 到 329 秒），输入 $0.042 每百万 token，输出免费；首页自称比 LLM 快 193.6 倍、便宜 444.6 倍，依据是自家的 System One 工作流评测。",
+        "创始人 Diogo Almeida 自述在 OpenAI 参与过让模型听指令的方法，也就是 ChatGPT 背后的研究，之后隐身两年做这个。公司称三分之一的财富 500 强在用，没给客户名；模型介绍文称 Jev 为早期访问。HN 约 280 分、215 条评论，评论多在问估值依据；有人说类似方法已有论文和开源模型，也有人反驳 Jev 是通用的。"
+      ],
+      "judge": "拿同一批分类任务在 Jev 和同价位的小模型上各跑一遍，比延迟、成本和置信度是否可信。",
+      "links": [
+        {
+          "label": "HN",
+          "url": "https://news.ycombinator.com/item?id=50023450"
+        },
+        {
+          "label": "产品",
+          "url": "https://typesafe.ai/blog/series-ai"
+        },
+        {
+          "label": "模型介绍",
+          "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+        }
+      ]
+    },
+    {
+      "group": "new",
+      "title": "big-arrow-on-the-screen",
+      "deck": "macOS 命令行，coding agent 用它在所有窗口最上层画箭头叫你来点；不点击、不输入",
+      "badges": [
+        "Show HN"
+      ],
+      "body": [
+        "franzenzenhofer 用 Swift 写的 macOS 命令行工具，命令名 bigarrow，附带 Claude Code 和 Codex 都能调用的技能。agent 需要你点某个按钮时，用一条命令在所有窗口最上层画箭头、方框和文字，例如指向 System Settings 里的 Allow 按钮并写上提示语；箭头点击穿透，不抢键盘焦点，过一会儿自己消失。",
+        "官方称画图不需要任何 macOS 权限，单个二进制，没有后台进程、账号和遥测；它只指给你看，不点击、不输入、不截屏。安装用 `brew install franzenzenhofer/tap/bigarrow`，再运行 `bigarrow install-skill`，要求 macOS 14 以上。",
+        "Show HN 发帖人 franze 在评论里说，Claude 即使开最高权限，也会拒绝输入密码、改安全设置、给外部服务建账号这类动作，原因在系统提示或模型本身，权限开关解决不了，所以需要把人叫过来点（作者自测）。HN 约 380 分、170 条评论，GitHub 约 470 星，README 称头两天近 400 星。"
+      ],
+      "links": [
+        {
+          "label": "HN",
+          "url": "https://news.ycombinator.com/item?id=50018817"
+        },
+        {
+          "label": "产品",
+          "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen"
+        }
+      ]
+    },
+    {
+      "group": "new",
+      "title": "Carrier-Explode",
+      "deck": "按运营商查 iPhone、Pixel、三星的 APN、VoLTE、5G 开没开；有 JSON API 和每日 CC0 数据集",
+      "badges": [
+        "Show HN"
+      ],
+      "body": [
+        "Carrier-Explode 是 simplyalec 的副业项目，持续归档各主流手机品牌的运营商设置，并附各类基带配置的解码器和说明。网站可以按运营商查 APN、VoLTE、Wi-Fi 通话和 5G 在 iPhone、Pixel、三星上有没有开；也可以按功能反查哪些运营商支持，或者对比任意两个版本、两家运营商，看某个构建改了什么。数据能通过 JSON API 取，也有每天更新的 CC0 数据集。首页提示 2.0 已发布，后端大幅改进，解码器还在补，欢迎贡献。作者在 HN 说，检查假设的活还有不少，但对几个爱好者社群有用。HN 约 220 分、29 条评论；评论里有人建议把可用数据回馈给 GNOME 的移动宽带供应商库。"
+      ],
+      "links": [
+        {
+          "label": "HN",
+          "url": "https://news.ycombinator.com/item?id=50024499"
+        },
+        {
+          "label": "产品",
+          "url": "https://carrierexplode.com/"
+        }
+      ]
+    },
+    {
+      "group": "new",
+      "title": "REA",
+      "deck": "让 coding agent 看原生二进制、Electron 应用内部和运行活动；npx 安装，HN 约 90 分",
+      "badges": [
+        "HN"
+      ],
+      "body": [
+        "REA 的作者账号是 morluto（GitHub morluto/rea），给 coding agent 接上检查程序的能力：看原生二进制里的函数、字符串、引用和调用关系，也能看 JavaScript 和 Electron 应用的模块、路由和 IPC，还能捕捉浏览器或进程的运行活动。安装是 npx rea-agents@latest setup，先出安装计划，你批准后重启 agent。官网有两个例子：Chrome 恐龙游戏为什么越跑越快（agent 读出加速规则，起始速度 6，每次更新加 0.001，上限 13）；Windows 计算器里 200 加 10% 为什么得 220（agent 在反汇编里找到 % 键按前一个数算百分比的分支，并用微软公开源码对照）。示例用 REA 4.1.0 和计算器 11.2508.4.0。HN 约 90 分、16 条评论，讨论集中在两点：比直接让 agent 用 Ghidra 或 radare2 强在哪（有评论者说各人本来就有自己的脚本和流程，也有人说它面向没有逆向方法的新手），以及「复制这句话给你的 agent 去安装」的方式安不安全。"
+      ],
+      "links": [
+        {
+          "label": "HN",
+          "url": "https://news.ycombinator.com/item?id=50028275"
+        },
+        {
+          "label": "产品",
+          "url": "https://rea.tools/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/morluto/rea"
+        }
+      ]
+    },
+    {
+      "group": "new",
+      "title": "iwant",
+      "deck": "在 GCP 各区域找空闲 GPU，部署开放权重模型，返回 OpenAI 兼容接口；PH 周五日榜第 25",
+      "badges": [
+        "PH"
+      ],
+      "body": [
+        "iwant 是开源命令行工具，PH 发布人是 Oskar Kocol（GitHub narevai/iwant）。它在 GCP 各区域搜索有空的 GPU，接着完成开通、下载模型和 vLLM 配置，最后返回 OpenAI 兼容的接口地址、API key 和 SSH 权限。支持 DeepSeek、Kimi、Minimax、MiMo、Step 这几家的开放权重模型。PH 页面显示周五日榜第 25，第三方镜像显示评论暂无。"
+      ],
+      "links": [
+        {
+          "label": "PH",
+          "url": "https://www.producthunt.com/products/iwant"
+        },
+        {
+          "label": "产品",
+          "url": "https://github.com/narevai/iwant"
+        }
+      ]
+    },
+    {
+      "group": "new",
+      "title": "OpenPilot",
+      "deck": "MIT 开源桌面 agent，填入任意 OpenAI 兼容接口；主打 Windows，macOS 版早期；PH 周五日榜第 10",
+      "badges": [
+        "PH"
+      ],
+      "body": [
+        "OpenPilot 是 Electron 桌面 agent，PH 发布人是 Ibrahim（GitHub ibmshaikh/OpenPilot，MIT 协议）。作者在 DEV 上自述，想要 Cursor 那样的体验，但开源、用自己的模型，所以做了它。用法：填入任意 OpenAI 兼容接口（OpenAI、OpenRouter、Ollama、LM Studio 或自建网关）的地址、key 和模型名，选一个项目文件夹，agent 在里面读写文件、跑命令、搜网页、用 MCP，敏感操作要你批准。它定位为独立 agent，不做编辑器。Windows 是主要平台，macOS 构建早期且未签名，暂无 Linux 版；第三方站点 AICrier 称默认开启匿名使用遥测，需要自己关（我没在官网核对）。PH 页面显示周五日榜第 10，65 位关注者。"
+      ],
+      "links": [
+        {
+          "label": "PH",
+          "url": "https://www.producthunt.com/products/openpilot"
+        },
+        {
+          "label": "产品",
+          "url": "https://openpilot.in/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/ibmshaikh/OpenPilot"
+        }
+      ]
+    },
+    {
+      "group": "interview",
+      "title": "Prime Intellect 复盘 Prime Agent 的 Rust 重写",
+      "deck": "2000 多个 agent、2000 亿 token、两周完成；官方自测首屏 23.6 毫秒，TS 版 722.8 毫秒",
+      "badges": [
+        "HN",
+        "博客"
+      ],
+      "body": [
+        "Prime Intellect（做训练、推理和沙箱的平台公司）10 月 9 日发博客，复盘怎么用自家 coding agent Prime Agent，把 Prime Agent 自己从 TypeScript 重写成 Rust。官方称 Prime Agent 8 月发布以来下载超过 30 万次、处理超过 8 万亿 token；这次重写用了 2000 多个 agent、1 万多个沙箱、2000 亿 token（推理用 GLM-5.3），耗时两周，另有 3 天的性能调优。",
+        "流程：一个根 agent 只调度、不写代码，按依赖拓扑排序拆任务，每个任务过四个 agent：规划、实现、审查（用另一个模型，专找错）、验证（在新沙箱里跑一致性测试）。人的活主要是搭验证，包括界面帧逐帧对比、会话记录对比、协议对比和功能清单审计。",
+        "官方自测结果：首屏 23.6 毫秒（TS 版 722.8，Claude Code 264.6，Codex CLI 296.8）；冷启动到可输入 55.8 毫秒（TS 版 737.8）；内存 106 MB（TS 版 607 MB，Claude Code 227 MB）；安装体积 59.6 MB（TS 版 172 MB）。文中承认一致性测试只覆盖脚本跑到的行为，其余靠内部先用再抓 bug；HN 约 22 分，评论有人说 2000 亿 token 没拆缓存命中和输出，算不出成本。"
+      ],
+      "links": [
+        {
+          "label": "HN",
+          "url": "https://news.ycombinator.com/item?id=50027694"
+        },
+        {
+          "label": "原文",
+          "url": "https://www.primeintellect.ai/blog/prime-agent-rust"
+        }
+      ]
+    },
+    {
+      "group": "interview",
+      "title": "Michael Lynch 列出 coding agent 的 6 类问题",
+      "deck": "他 2025 年 2 月起用 coding agent，称连接模型和代码库的 agent 是瓶颈；HN 约 77 分",
+      "badges": [
+        "HN",
+        "博客"
+      ],
+      "body": [
+        "Lynch 10 月 9 日发了这篇博客，读完约 11 分钟；他从 2025 年 2 月开始用 coding agent，试过 Claude Code、Codex、OpenCode、Cline 和 Pi，日常用 OpenCode 和 Claude Code。核心观点：模型进步很快，连接模型和代码库的 agent 是瓶颈。",
+        "他列了 6 类问题：不会管任务（OpenCode 把约 1.5k 行的改动拆成 10 个子任务，却一个一个串行做）；不会委派（不会判断把 5 万行代码扫描交给更便宜的模型）；不了解自己（问 Claude 怎么用 Claude 的功能，它要去网上搜）；计划难读（他举 Codex 的计划只是零散的设计决策）；一点由头就停（睡前跑的任务，两分钟后停下来问 git 分支叫什么，等了一夜）；安全靠自觉（文档让你写礼貌的请求，请它别读某些文件，他试过，agent 立刻无视）。",
+        "他自己写了沙箱，把 agent 限制在仓库目录里。文末给出一份理想清单：按任务分配模型、系统层沙箱、30 分钟没回应就自行决定、手机能用的网页界面等。HN 约 77 分、75 条评论，有评论称最近三四个月的新模型在并行和委派上好了很多。"
+      ],
+      "links": [
+        {
+          "label": "HN",
+          "url": "https://news.ycombinator.com/item?id=50020947"
+        },
+        {
+          "label": "原文",
+          "url": "https://mtlynch.io/why-are-coding-agents-so-dumb/"
+        }
+      ]
+    },
+    {
+      "group": "interview",
+      "title": "Simon Willison 谈社区接手 Deno",
+      "deck": "称有了 coding agent，小社区也许能让 Deno 继续往前走；这条回复约 20 赞",
+      "badges": [
+        "X"
+      ],
+      "body": [
+        "@mitsuhiko 在 Deno 宣布后发帖，说好奇 Deno 作为开源项目能不能留下来（约 220 赞）。Simon Willison 回复（北京时间 10 月 10 日 01:49）：几年前，维护这种规模项目的人力成本会让社区接手几乎不可能，他在想，有了 coding agent，一个小的开发社区也许能让它继续往前走。这条回复约 20 赞、3 条回复，篇幅只有一句话。Deno 官方博客写明运行时再维护一年，之后保持开源、欢迎接手。HN 评论里对此有两种说法：一位评论者称过去一年 Deno 大部分开发由 LLM 完成，所以没人愿意 fork；另一位说社区接手往往以多数维护者离开收场（均为评论者说法，没有核对）。"
+      ],
+      "links": [
+        {
+          "label": "X",
+          "url": "https://x.com/simonw/status/2108615902308769912"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/mitsuhiko/status/2108566442795024661"
+        }
+      ]
+    },
+    {
+      "group": "interview",
+      "title": "Better Stack 解读 Deno 加入 Cloudflare",
+      "deck": "视频标题称 Cloudflare 关掉了 Deno；4 分 21 秒，讲停更时间表、celld 和锁定争议",
+      "badges": [
+        "YouTube"
+      ],
+      "body": [
+        "Better Stack（做监控和日志的公司）在 10 月 9 日太平洋时间 11:00 发布，视频标题是《Deno Is Over (Cloudflare Shut It Down)》，时长 4 分 21 秒，抓取时约 3.7 万播放。章节依次是：停更时间表（Deno Deploy、JSR、rusty_v8）、Durable Objects 简介、workerd 的问题、celld、锁定争议、受影响的人、结论。简介称 Cloudflare 看中的是这个团队和他们的 celld 项目。我只读了简介和章节，视频正文没有逐段核对。"
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/watch?v=W_g7WKMwNeo"
+        },
+        {
+          "label": "原文",
+          "url": "https://deno.com/blog/cloudflare"
+        }
+      ]
+    },
+    {
+      "group": "interview",
+      "title": "Bryan Cantrill 谈 Oxide 融资前的投资人分歧",
+      "deck": "称多家风投内部为 Oxide 争到几乎动手，有合伙人因此离开；该帖约 91 赞",
+      "badges": [
+        "X"
+      ],
+      "body": [
+        "Oxide 联合创始人兼 CTO Cantrill 在融资公布当天（北京时间 10 月 10 日 00:06）发了条长帖，回应 @adamhjk 的帖子。后者说 Oxide 当年是典型的押注：要么做成大公司，要么归零（约 153 赞）。Cantrill 说 Oxide 在投资机构内部非常有分歧：多家风投合伙制公司为它争到几乎动手（他特意注明，总是在拒绝的时候），有合伙人因此离开所在公司，其中一位在公司拒绝 Oxide 后离开了风投行业；他认为根源是对风投到底该做什么的不同理解，并感谢 Eclipse 这类敢投的机构。该帖约 91 赞。同一天他回复 @fintanr（后者说几年前曾对 Cantrill 说过 Oxide 会被收购），说他和 Steve Tuck 一直讲的是在建 a generational company, not an acquisition target。"
+      ],
+      "links": [
+        {
+          "label": "X",
+          "url": "https://x.com/bcantrill/status/2108589956851720289"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/bcantrill/status/2108633788297482573"
+        },
+        {
+          "label": "原文",
+          "url": "https://oxide.computer/blog/our-445m-series-d"
+        }
+      ]
+    }
+  ]
+}
